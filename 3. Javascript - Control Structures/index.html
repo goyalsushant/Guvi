@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Script Attributes Demo</title>
+</head>
+<body>
+  <h1>Script Loading Demo</h1>
+  <p>Open your browser console to see the output.</p>
+
+  <!-- DEFER script: executes after HTML parsing -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
+    defer
+    integrity="sha384-AfD/RbA3fzxYb9TPwh9N5TjXue1j8fNBB6br19E7FK3bI7XkB+nOqoyQ6aUJjcUf"
+    crossorigin="anonymous">
+  </script>
+
+  <!-- ASYNC script: executes as soon as it’s ready (order not guaranteed) -->
+  <!-- <script
+    src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
+    async
+    integrity="sha384-AfD/RbA3fzxYb9TPwh9N5TjXue1j8fNBB6br19E7FK3bI7XkB+nOqoyQ6aUJjcUf"
+    crossorigin="anonymous">
+  </script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+  <!-- Regular script to demonstrate DOM readiness and Lodash usage -->
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOM fully loaded.');
+
+      if (typeof _ !== 'undefined') {
+        console.log('Lodash version (from defer):', _.VERSION);
+      } else {
+        console.warn('Lodash not loaded yet (possibly due to async timing).');
+      }
+    });
+  </script>
+</body>
+</html>
+
+<!-- 
+defer -> It will wait till the end of HTML rendering, then it will process the script.
+async -> it will delegate the execution not necessarily till the end of HTML rendering
+integrity -> it check for the hash key within the script tag and the file / response received from the server. if it is not the same the browser will refuse to process the script
+cross-origin -> it checks if we can access the server either anonymously or by adding some credentials in the form of cookies 
+-->
