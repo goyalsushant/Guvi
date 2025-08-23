@@ -1,0 +1,30 @@
+/* it will reference to all the h1 elements */
+h1 {
+    /* font-size: 10px; */
+    color: red;
+}
+
+div {
+    background-color: black;
+}
+
+h1#heading-1{
+    color: chocolate !important;
+}
+
+.heading-1 {
+    color: blue !important;
+}
+
+h1, #heading-1 {
+    color: beige !important;
+}
+
+#one {
+    background-color: blueviolet;
+    color: red;
+}
+
+#t2 {
+    color: orange;
+}

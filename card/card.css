@@ -1,0 +1,27 @@
+.card {
+    border: 1px solid;
+    width: 200px;
+    font-size: 32px;
+}
+
+.avatar {
+    width: 100%;
+}
+
+#follow-btn {
+    color: white;
+    /* cursor: pointer; */
+    background-color: #008CCA;
+}
+
+.bio {
+    display: block;
+}
+
+#follow-btn:hover {
+    cursor: pointer;
+}
+
+#follow-btn:active {
+    transform: scale(0.8);
+}

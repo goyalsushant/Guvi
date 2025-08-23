@@ -1,0 +1,12 @@
+.anchor:link {
+    color: blue;
+}
+.anchor:visited {
+    color: orange;
+}
+.anchor:hover {
+    cursor: crosshair;
+}
+.anchor:active {
+    color: green;
+}
