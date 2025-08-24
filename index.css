@@ -1,0 +1,51 @@
+.div-1 {
+    background-color: yellow;
+    border: 1px solid black;
+    /* padding: 5px 10px 15px;
+    margin: 5px; */
+    /* padding-left: 5px;
+    padding-bottom: 15px;
+    padding-right: 25px;
+    padding-top: 35px;
+
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 15px; */
+    margin: 2rem
+}
+
+.div-2 {
+    width: 100%;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 0;
+}
+
+span {
+    background-color: blue;
+    padding: 2em;
+}
+
+p {
+    font-size: 24px;
+}
+
+
+body {
+    font-size: 20px;
+}
+
+html {
+    font-size: 30px;
+}
+
+
+/* 
+    px, rem, em and % - these are nothing but hwo the sizes are to be considered
+    px - it will be defined into a standard unit which is measurable
+    em - it will go to the parent and check the font-size property, get the value and act relative to the value received
+    rem - it will be relative to the root tag
+
+    font-size for the root element is set to 16px.
+*/

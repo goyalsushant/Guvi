@@ -1,0 +1,56 @@
+.color {
+    height: 100px;
+    width: 100px;
+    /* position: absolute; */
+    /* color: blue; */
+    background-color: blue;
+}
+
+.rgba {
+    height: 100px;
+    width: 100px;
+    background-color: rgba(146, 68, 52, 0.7);
+}
+
+.hex {
+    height: 100px;
+    width: 100px;
+    background-color: #0bcdef;
+}
+
+.hsl {
+    height: 100px;
+    width: 100px;
+    background-color: hsl(0, 100%, 50%);
+}
+
+.gradient {
+    height: 100px;
+    width: 400px;
+    background: linear-gradient(45deg, red, yellow);
+}
+
+.gradient-deg {
+    height: 100px;
+    width: 400px;
+    background: linear-gradient(270deg, red 0%, yellow 50%, green 100%);
+    color: white;
+}
+
+.radial-deg {
+    height: 100px;
+    width: 200px;
+    background: radial-gradient(ellipse at center, red 20%, yellow 40%, green 60%, blue 80%);
+}
+
+.repeating-deg {
+    height: 100px;
+    width: 400px;
+    background: repeating-linear-gradient(45deg, #915151 0%, yellow 20%);
+}
+
+.another-gradient {
+    height: 200px;
+    width: 500px;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
