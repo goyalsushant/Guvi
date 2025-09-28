@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" id="divId">
+        <h2>My List</h2>
+    </div>
+
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <script>
+        //document.getElementById('divId')
+
+        // Adding elements using innerHTML
+        // const container = document.getElementsByClassName('container')
+        // console.log(container)
+        // container[0].innerHTML += "<p>This \nis a paragrpah added dynamically</p>"
+
+        // Creating an element
+        // const newParagraph = document.createElement('p')
+        // newParagraph.textContent = "This is a paragraph created using createElement"
+
+        // Place the element using append or appendChild
+        // console.log(container[0].appendChild(newParagraph))
+        // console.log(container[0].append('Some random text', newParagraph))
+
+
+        // Place element using insertBefore
+        const newItem = document.createElement('li')
+        newItem.textContent = 'New Item'
+        
+        const list = document.getElementById('list')
+
+        const listItems = list.getElementsByTagName('li')[1]
+        // list.appendChild(newItem)
+        list.insertBefore(newItem, listItems)
+
+
+    </script>
+</body>
+
+</html>

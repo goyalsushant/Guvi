@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            height: 300px;
+            width: 300px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button id="btn">Click</button>
+    <button id="cta-btn">Click</button> -->
+
+    <div></div>
+
+    <script>
+
+        // Exampple of an event
+        // const button = document.getElementById('btn')
+        // button.onclick = function() {
+        //     alert('Button is clicked.')
+        // }
+
+        // ON - CLICK
+
+        // adding an event listener
+        // document.getElementById('btn').addEventListener('click', ()=>{
+        //     alert('this button is clicked')
+        // })
+
+        // Mouse Events
+        const div = document.getElementsByTagName('div')[0]
+        div.addEventListener('click', ()=>{
+            div.style.backgroundColor = 'red'
+        })
+
+        div.addEventListener('dblclick', ()=>{
+            div.style.backgroundColor = 'green'
+        })
+
+        div.addEventListener('mouseenter', ()=>{
+            div.style.backgroundColor = 'lightblue'
+        })
+
+        div.addEventListener('mouseleave', ()=>{
+            div.style.backgroundColor = 'blue'
+        })
+
+        // Keyboard Events
+        document.addEventListener('keydown', ()=>{
+            div.style.backgroundColor = 'orange'
+        })
+
+        document.addEventListener('keyup', ()=>{
+            div.style.backgroundColor = 'yellow'
+        })
+
+        document.addEventListener('keydown', (e)=>{
+            console.log(e)
+            if(e.key=='@') {
+                console.log(e.key)
+                const para = document.createElement('p')
+                para.textContent = 'Not allowed'
+                div.appendChild(para)
+            }
+        })
+    </script>
+</body>
+
+</html>

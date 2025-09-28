@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        <label for="text">Text Field</label>
+        <input type="text" name="name" id="text" required placeholder="Enter name" />
+        <input type="number" name="number" />
+        <input type="password" placeholder="Enter password" minlength="6" maxlength="12" />
+        <input type="email" />
+        <input type="date" name="">
+        <input type="file" name="">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Form Events
+
+        const form = document.getElementsByTagName('form')[0]
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            alert('Submit is clicked')
+        })
+
+        const textInput = document.getElementById('text')
+        textInput.addEventListener('input', (e) => {
+            if(textInput.value.length < 5) {
+                textInput.style.borderColor = 'red'
+            }
+            else {
+                textInput.style.borderColor = 'unset'
+            }
+        })
+
+        let textValue = ''
+
+
+        textInput.addEventListener('change', (e) => {
+            console.log(e)
+            textValue = e.target.value
+            console.log(textValue)
+            // if(textInput.value.length < 5) {
+            //     textInput.style.borderColor = 'red'
+            // }
+            // else {
+            //     textInput.style.borderColor = 'unset'
+            // }
+        })
+
+
+        // form.addEventListener('input', (e) => {
+        //     // e.preventDefault()
+        //     console.log(e)
+        //     // alert('Submit is clicked')
+        // })
+    </script>
+</body>
+
+</html>
