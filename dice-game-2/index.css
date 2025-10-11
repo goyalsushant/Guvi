@@ -1,0 +1,48 @@
+body {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+
+}
+
+h1 {
+
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.score {
+    background: white;
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 30px 0;
+}
+
+.dice img {
+    width: 150px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
