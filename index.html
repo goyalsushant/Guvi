@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function fetchData(callback) {
+        //     console.log('inside fetch')
+        //     setTimeout(() => {
+        //         const user = { name: 'Alice', age: 25 }
+        //         callback(user)
+        //     }, 1000)
+        //     console.log('line 7')
+
+        // }
+
+        // function printData(data) {
+        //     console.log('User', data)
+        // }
+
+        // fetchData(printData)
+
+        // function getUserData(callback) { }
+
+        // function getPosts(id, callback) {
+        //     callback()
+        // }
+
+        // function getComments(id, callback) {
+        //     callback()
+        // }
+
+        // function getUserDetailsWhoPostedComment(id, callback) {
+        //     callback()
+        // }
+
+        // function userDataCallback() {
+        //     function postsCallback() { }
+        //     getPosts(postsCallback)
+        // }
+
+        // getUserData(userDataCallback)
+
+        getUserData((user) => {
+            if (user == undefined || user == null) throw Error('User not found')
+            if (user.id) {
+                getPosts(user.id, function (posts) {
+                    getComments(posts[0].id, function (comments) {
+                        // console.log(comments)
+                        getUserDetailsWhoPostedComment(comment[0].id, (data) => {
+                            console.log(data)
+                        })
+                    })
+                })
+            }
+            else {
+                getPosts(user.email, function (posts, err) {
+                    if (err) {
+
+                    }
+                    else {
+                        getComments(posts[0].id, function (comments) {
+                            // console.log(comments)
+                            getUserDetailsWhoPostedComment(comment[0].id, (data) => {
+                                console.log(data)
+                            })
+                        })
+                    }
+
+                })
+            }
+        })
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
