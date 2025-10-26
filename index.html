@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD with Fetch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>CRUD Example</h1>
+
+        <form id="userForm">
+            <input type="text" id="name" placeholder="Name (required)">
+            <input type="email" name="email" id="email" placeholder="Email (required)">
+            <button type="submit" id="submitBtn">Add User</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userTable"></tbody>
+        </table>
+    </div>
+    
+    <!-- <script src="script.js"></script> -->
+    <script src="localstorage.js"></script>
+</body>
+</html>
